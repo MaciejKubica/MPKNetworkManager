@@ -1,0 +1,15 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/MPKNetworkManager/MPK.Core/obj
+/MPKNetworkManager/.vs/MPKNetworkManager/v14
+/MPKNetworkManager/MPK.Core/bin
+/MPKNetworkManager/MPK.NetworkConfigurator/bin
+/MPKNetworkManager/MPK.NetworkConfigurator/obj
+/MPKNetworkManager/MPK.PingChecker/bin
+/MPKNetworkManager/MPK.PingChecker/obj
+/MPKNetworkManager/MPK.ProcessManager/bin
+/MPKNetworkManager/MPK.ProcessManager/obj
+/MPKNetworkManager/MPKNetworkManager/bin/Debug
+/MPKNetworkManager/packages
