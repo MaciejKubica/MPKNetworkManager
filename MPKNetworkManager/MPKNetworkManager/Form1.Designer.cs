@@ -30,6 +30,10 @@
         {
             this.components = new System.ComponentModel.Container();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.lbGateways = new System.Windows.Forms.ListBox();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.lbIpAddresses = new System.Windows.Forms.ListBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.mtbGateway = new System.Windows.Forms.MaskedTextBox();
             this.button1 = new System.Windows.Forms.Button();
@@ -39,15 +43,15 @@
             this.mtbSubnet = new System.Windows.Forms.MaskedTextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
-            this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.lbIpAddresses = new System.Windows.Forms.ListBox();
-            this.groupBox4 = new System.Windows.Forms.GroupBox();
-            this.lbGateways = new System.Windows.Forms.ListBox();
+            this.groupBox5 = new System.Windows.Forms.GroupBox();
+            this.lbCommands = new System.Windows.Forms.ListBox();
+            this.button2 = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
+            this.groupBox4.SuspendLayout();
+            this.groupBox3.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
-            this.groupBox3.SuspendLayout();
-            this.groupBox4.SuspendLayout();
+            this.groupBox5.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -65,6 +69,45 @@
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Network Manager";
+            // 
+            // groupBox4
+            // 
+            this.groupBox4.Controls.Add(this.lbGateways);
+            this.groupBox4.Location = new System.Drawing.Point(6, 108);
+            this.groupBox4.Name = "groupBox4";
+            this.groupBox4.Size = new System.Drawing.Size(262, 84);
+            this.groupBox4.TabIndex = 9;
+            this.groupBox4.TabStop = false;
+            this.groupBox4.Text = "Gateways:";
+            // 
+            // lbGateways
+            // 
+            this.lbGateways.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lbGateways.FormattingEnabled = true;
+            this.lbGateways.Location = new System.Drawing.Point(3, 16);
+            this.lbGateways.Name = "lbGateways";
+            this.lbGateways.Size = new System.Drawing.Size(256, 65);
+            this.lbGateways.TabIndex = 0;
+            // 
+            // groupBox3
+            // 
+            this.groupBox3.Controls.Add(this.lbIpAddresses);
+            this.groupBox3.Location = new System.Drawing.Point(6, 18);
+            this.groupBox3.Name = "groupBox3";
+            this.groupBox3.Size = new System.Drawing.Size(262, 84);
+            this.groupBox3.TabIndex = 8;
+            this.groupBox3.TabStop = false;
+            this.groupBox3.Text = "IP addresses:";
+            // 
+            // lbIpAddresses
+            // 
+            this.lbIpAddresses.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lbIpAddresses.FormattingEnabled = true;
+            this.lbIpAddresses.Location = new System.Drawing.Point(3, 16);
+            this.lbIpAddresses.Margin = new System.Windows.Forms.Padding(0);
+            this.lbIpAddresses.Name = "lbIpAddresses";
+            this.lbIpAddresses.Size = new System.Drawing.Size(256, 65);
+            this.lbIpAddresses.TabIndex = 0;
             // 
             // groupBox2
             // 
@@ -151,60 +194,52 @@
             // 
             this.errorProvider1.ContainerControl = this;
             // 
-            // groupBox3
+            // groupBox5
             // 
-            this.groupBox3.Controls.Add(this.lbIpAddresses);
-            this.groupBox3.Location = new System.Drawing.Point(6, 18);
-            this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(262, 84);
-            this.groupBox3.TabIndex = 8;
-            this.groupBox3.TabStop = false;
-            this.groupBox3.Text = "IP addresses:";
+            this.groupBox5.Controls.Add(this.button2);
+            this.groupBox5.Controls.Add(this.lbCommands);
+            this.groupBox5.Location = new System.Drawing.Point(9, 221);
+            this.groupBox5.Name = "groupBox5";
+            this.groupBox5.Size = new System.Drawing.Size(496, 134);
+            this.groupBox5.TabIndex = 1;
+            this.groupBox5.TabStop = false;
+            this.groupBox5.Text = "Input commands";
             // 
-            // lbIpAddresses
+            // lbCommands
             // 
-            this.lbIpAddresses.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lbIpAddresses.FormattingEnabled = true;
-            this.lbIpAddresses.Location = new System.Drawing.Point(3, 16);
-            this.lbIpAddresses.Margin = new System.Windows.Forms.Padding(0);
-            this.lbIpAddresses.Name = "lbIpAddresses";
-            this.lbIpAddresses.Size = new System.Drawing.Size(256, 65);
-            this.lbIpAddresses.TabIndex = 0;
+            this.lbCommands.FormattingEnabled = true;
+            this.lbCommands.Location = new System.Drawing.Point(6, 19);
+            this.lbCommands.Name = "lbCommands";
+            this.lbCommands.Size = new System.Drawing.Size(259, 95);
+            this.lbCommands.TabIndex = 0;
             // 
-            // groupBox4
+            // button2
             // 
-            this.groupBox4.Controls.Add(this.lbGateways);
-            this.groupBox4.Location = new System.Drawing.Point(6, 108);
-            this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(262, 84);
-            this.groupBox4.TabIndex = 9;
-            this.groupBox4.TabStop = false;
-            this.groupBox4.Text = "Gateways:";
-            // 
-            // lbGateways
-            // 
-            this.lbGateways.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lbGateways.FormattingEnabled = true;
-            this.lbGateways.Location = new System.Drawing.Point(3, 16);
-            this.lbGateways.Name = "lbGateways";
-            this.lbGateways.Size = new System.Drawing.Size(256, 65);
-            this.lbGateways.TabIndex = 0;
+            this.button2.Location = new System.Drawing.Point(271, 19);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(75, 23);
+            this.button2.TabIndex = 1;
+            this.button2.Text = "Run cmd";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(514, 391);
+            this.ClientSize = new System.Drawing.Size(514, 436);
+            this.Controls.Add(this.groupBox5);
             this.Controls.Add(this.groupBox1);
             this.Name = "Form1";
             this.Text = "MPKNetwork";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.groupBox1.ResumeLayout(false);
+            this.groupBox4.ResumeLayout(false);
+            this.groupBox3.ResumeLayout(false);
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
-            this.groupBox3.ResumeLayout(false);
-            this.groupBox4.ResumeLayout(false);
+            this.groupBox5.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -225,6 +260,9 @@
         private System.Windows.Forms.ListBox lbGateways;
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.ListBox lbIpAddresses;
+        private System.Windows.Forms.GroupBox groupBox5;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.ListBox lbCommands;
     }
 }
 

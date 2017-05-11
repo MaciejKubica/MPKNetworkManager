@@ -20,6 +20,8 @@ namespace MPKNetworkManager
             validator = new IPValidator();
             lbIpAddresses.DataSource = Registration.NetworkManagement.IPAddresses;
             lbGateways.DataSource = Registration.NetworkManagement.Gateways;
+
+            lbCommands.DataSource = Registration.Commands;
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -40,10 +42,12 @@ namespace MPKNetworkManager
             //{
                 
             //}
+            
+
         }
 
         private void button1_Click(object sender, EventArgs e)
-        {   
+        {               
             var ipaddressValidationResult = validator.DoValidation(mtbIPAddress.Text);
             if (!ipaddressValidationResult.IsValid)
             {
@@ -67,6 +71,14 @@ namespace MPKNetworkManager
 
             lbIpAddresses.DataSource = Registration.NetworkManagement.IPAddresses;
             lbGateways.DataSource = Registration.NetworkManagement.Gateways;
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            if (lbCommands.SelectedItem != null)
+            {
+                Registration.ProcessManager.StartProcess(lbCommands.SelectedItem.ToString());
+            }
         }
     }
 }
