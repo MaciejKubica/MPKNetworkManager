@@ -80,5 +80,19 @@ namespace MPKNetworkManager
                 Registration.ProcessManager.StartProcess(lbCommands.SelectedItem.ToString());
             }
         }
+
+        private async void btnPing_Click(object sender, EventArgs e)
+        {
+            lvPingResult.Items.Clear();
+            var result =  await Registration.PingChecker.DoPingCommandAsync(tbPingAddress.Text, (int)nudPort.Value, (int)nudTimes.Value);
+
+            foreach (var item in result.PingReplaies)
+            {
+                lvPingResult.Items.Add(item.Address + " " + item.Status.ToString() + " " + item.RoundtripTime + " " + item.TimeToLive);
+            }
+
+            MessageBox.Show($"Result: \n\r Positive percent: {result.PositivePercent} \n\r Avarage round trip: {result.RoundTripAverageTime} \n\r Max round trip: {result.RoundTripMaximumTime} \n\r Min round trip: {result.RoundTripMinimumTime}", "Result");
+            
+        }
     }
 }

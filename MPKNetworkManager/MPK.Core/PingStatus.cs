@@ -3,6 +3,6 @@
     public enum PingStatus
     {
         Success,
-
+        Failed
     }
 }

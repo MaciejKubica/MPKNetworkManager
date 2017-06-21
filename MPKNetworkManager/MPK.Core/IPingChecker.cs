@@ -8,8 +8,8 @@ namespace MPK.Core
 {
     public interface IPingChecker
     {
-        PingStatistics DoPingCommand(string pingAddress, int port = -1, params string[] attributes);
+        PingStatistics DoPingCommand(string pingAddress, int port = -1, int counter = 10, params string[] attributes);
 
-        Task<PingStatistics> DoPingCommandAsync(string pingAddress, int port = -1, params string[] attributes);
+        Task<PingStatistics> DoPingCommandAsync(string pingAddress, int port = -1, int counter = 10, params string[] attributes);
     }
 }
