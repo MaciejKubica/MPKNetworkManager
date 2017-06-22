@@ -77,7 +77,10 @@ namespace MPKNetworkManager
         {
             if (lbCommands.SelectedItem != null)
             {
-                Registration.ProcessManager.StartProcess(lbCommands.SelectedItem.ToString());
+                string stdOutput;
+                string stdError;
+                Registration.ProcessManager.StartProcess(lbCommands.SelectedItem.ToString(), out stdOutput, out stdError);
+                MessageBox.Show(stdOutput, "Result");
             }
         }
 

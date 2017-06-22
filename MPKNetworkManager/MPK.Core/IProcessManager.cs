@@ -8,6 +8,6 @@ namespace MPK.Core
 {
     public interface IProcessManager
     {
-        void StartProcess(string processName, params string[] attributes);
+        void StartProcess(string processName, out string stdOutput, out string stdError, params string[] attributes);
     }
 }

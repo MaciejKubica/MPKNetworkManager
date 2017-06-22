@@ -10,18 +10,19 @@ namespace MPK.ProcessManager
 {
     public class ProcessManager : IProcessManager
     {
-        public void StartProcess(string processName, params string[] attributes)
+        public void StartProcess(string processName, out string stdOutput, out string stdError, params string[] attributes)
         {            
-            ProcessStartInfo proc = new ProcessStartInfo();
-            proc.FileName = @"C:\windows\system32\cmd.exe";            
-            Process.Start(new ProcessStartInfo(@"C:\windows\system32\cmd.exe", "/c" + processName));
-            //Process proceess = new Process();
-            //proceess.OutputDataReceived += Proceess_OutputDataReceived;
-        }
+            var procesInfo = new ProcessStartInfo(@"C:\windows\system32\cmd.exe", "/c" + processName);
+            var process = new Process();
+            procesInfo.RedirectStandardOutput = true;
+            procesInfo.RedirectStandardError = true;
+            procesInfo.UseShellExecute = false;
+            process.StartInfo = procesInfo;
+            process.Start();
+            process.WaitForExit();
 
-        //private void Proceess_OutputDataReceived(object sender, DataReceivedEventArgs e)
-        //{
-        //    e.Data
-        //}
+            stdOutput = process.StandardOutput.ReadToEnd();
+            stdError = process.StandardError.ReadToEnd();
+        }
     }
 }
